@@ -29,7 +29,15 @@ class ResultsController < ApplicationController
   end
 
   def create
-
+    @result = Result.new(Result.convert(results_params))
+    if @result.save
+      @response_code = 200
+      @message = "Success!"
+    else
+      @response_code = 400
+      @message = "Bad Request"
+    end
+    render 'create', formats: :json, handlers: :jbuilder, status: @response_code
   end
 
   def destroy
@@ -59,6 +67,7 @@ class ResultsController < ApplicationController
         :name,
         :score,
         :life,
+        :difficulty,
         analysis:[
             :muscleMenu,
             :muscleSpeed,
