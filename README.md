@@ -35,8 +35,6 @@
 
 ```json
 {
-  "responseCode": 200,
-  "message": "Success!",
   "name": "チームおもちゃLABO",
   "difficulty": "easy", 
   "score": 114514,
