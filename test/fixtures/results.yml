@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  score: 1
+  muscle: 1
+  speed: 1
+  affinity: 1
+  exploratory: 1
+  life: 1
+
+two:
+  name: MyString
+  score: 1
+  muscle: 1
+  speed: 1
+  affinity: 1
+  exploratory: 1
+  life: 1
