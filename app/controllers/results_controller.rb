@@ -33,10 +33,39 @@ class ResultsController < ApplicationController
   end
 
   def destroy
-
+    if params[:id]
+      begin
+        @result = Result.find(params[:id])
+        @result.destroy!
+        @response_code = 204
+        @message = "削除に成功しました"
+      rescue RecordNotFound
+        @response_code = 404
+        @message = "存在しないidが指定されました。"
+      end
+    else
+      @response_code = 400
+      @message = "idが指定されていません。"
+    end
+    render json:{responseCode: @response_code, message: @message}, response: @response_code
   end
 
   private
   def authenticate?
+  end
+
+  def results_params
+    params.permit(
+        :name,
+        :score,
+        :life,
+        analysis:[
+            :muscleMenu,
+            :muscleSpeed,
+            :clearTime,
+            :remainingTime,
+            :key
+        ]
+    )
   end
 end
