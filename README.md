@@ -35,6 +35,8 @@
 
 ```json
 {
+  "responseCode": 200,
+  "message": "Success!",
   "name": "チームおもちゃLABO",
   "score": 114514,
   "analysis": {
@@ -53,6 +55,7 @@
 ```json
 {
   "responseCode": 200,
+  "message": "Success!",
   "url": "https://〇〇.✕✕.com/aaa",
   "qr": "https://chart.apis.google.com/chart?cht=qr&chs=300x300&choe=utf8&chl=https://〇〇.✕✕.com/aaa"
 }
@@ -71,6 +74,7 @@ resultId: 返してほしい結果のID
 ```json
 {
   "responseCode": 200,
+  "message": "Success!",
   "result": {
     "name": "チームおもちゃLABO",
     "score": 114514,
@@ -92,6 +96,7 @@ resultId: 返してほしい結果のID
 ```
 order: desc or asc (default: desc)
 page: ページ番号
+per_page: 1ページあたりの件数 (default: 5)
 ```
 
 - Response
@@ -99,6 +104,7 @@ page: ページ番号
 ```json
 {
   "responseCode": 200,
+  "message":"Success!",
   "total": 813,
   "currentPage": 1,
   "results": [
