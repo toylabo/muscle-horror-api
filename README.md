@@ -38,6 +38,7 @@
   "responseCode": 200,
   "message": "Success!",
   "name": "チームおもちゃLABO",
+  "difficulty": "easy", 
   "score": 114514,
   "analysis": {
     "muscleMenu": 3,
@@ -49,6 +50,7 @@
   "life": 3
 }
 ```
+difficulty: easy, normal, hardの3種類
 
 - Response
 
@@ -77,6 +79,7 @@ resultId: 返してほしい結果のID
   "message": "Success!",
   "result": {
     "name": "チームおもちゃLABO",
+    "difficulty": 0,
     "score": 114514,
     "analysis": {
       "muscle": 4,
