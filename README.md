@@ -93,7 +93,7 @@ resultId: 返してほしい結果のID
 order: desc or asc (default: desc)
 page: ページ番号
 ```
-
+にゃ
 - Response
 
 ```json
