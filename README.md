@@ -79,7 +79,7 @@ resultId: 返してほしい結果のID
   "message": "Success!",
   "result": {
     "name": "チームおもちゃLABO",
-    "difficulty": 0,
+    "difficulty": "easy",
     "score": 114514,
     "analysis": {
       "muscle": 4,
