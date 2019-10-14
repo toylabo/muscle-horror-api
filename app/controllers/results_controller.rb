@@ -47,7 +47,7 @@ class ResultsController < ApplicationController
         @result.destroy!
         @response_code = 204
         @message = "削除に成功しました"
-      rescue RecordNotFound
+      rescue ActiveRecord::RecordNotFound
         @response_code = 404
         @message = "存在しないidが指定されました。"
       end
@@ -55,11 +55,16 @@ class ResultsController < ApplicationController
       @response_code = 400
       @message = "idが指定されていません。"
     end
-    render json:{responseCode: @response_code, message: @message}, response: @response_code
+    render json:{responseCode: @response_code, message: @message}, status: @response_code
   end
 
   private
   def authenticate?
+    begin
+      @user = User.find_by!(token: request.headers[:token])
+    rescue ActiveRecord::RecordNotFound
+      return render(json: {responseCode: 401, message: "Unauthorized"}, status: 401)
+    end
   end
 
   def results_params

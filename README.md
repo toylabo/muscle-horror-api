@@ -52,6 +52,8 @@ difficulty: easy, normal, hardの3種類
 
 - Response
 
+`非認証時: 401 UnAuthorized`
+
 ```json
 {
   "responseCode": 200,
@@ -62,6 +64,12 @@ difficulty: easy, normal, hardの3種類
 ```
 
 ### [GET] /results/{resultId} 結果の取得
+
+- HTTP Request Headers
+
+```
+token: トークン
+```
 
 - Parameters
 
@@ -88,6 +96,29 @@ resultId: 返してほしい結果のID
     "life": 1
   }
 }
+```
+
+### [DELETE] /results/{resultId} 結果の削除
+
+- HTTP Request Headers
+
+```
+token: トークン
+```
+
+- Parameters
+
+```
+resultId: 返してほしい結果のID
+```
+
+- Response
+
+```
+成功時: 204 No Content
+非認証時: 401 UnAuthorized
+指定したidがないとき: 404 Not Found
+id未指定時: 400 Bad Request
 ```
 
 ### [GET] /results ランキングの取得
