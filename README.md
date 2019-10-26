@@ -121,7 +121,41 @@ resultId: 返してほしい結果のID
 id未指定時: 400 Bad Request
 ```
 
-### [GET] /results ランキングの取得
+### [GET] /results リセントの取得
+
+- Parameters
+
+```
+order: desc or asc (default: desc)
+page: ページ番号
+per_page: 1ページあたりの件数 (default: 5)
+```
+
+- Response
+
+```json
+{
+  "responseCode": 200,
+  "message":"Success!",
+  "total": 813,
+  "currentPage": 1,
+  "results": [
+    {
+      "id": 2,
+      "name": "チーム2",
+      "score": 810000
+    },
+    {
+      "id": 1,
+      "name": "チーム1",
+      "score": 114514
+    }
+  ]
+}
+```
+
+
+### [GET] /ranking ランキングの取得
 
 - Parameters
 
