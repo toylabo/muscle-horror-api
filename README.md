@@ -141,12 +141,12 @@ per_page: 1ページあたりの件数 (default: 5)
   "currentPage": 1,
   "results": [
     {
-      "id": 1,
+      "id": 2,
       "name": "チーム2",
       "score": 810000
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "チーム1",
       "score": 114514
     }
