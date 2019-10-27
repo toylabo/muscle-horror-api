@@ -41,8 +41,7 @@
   "analysis": {
     "muscleCount": 67,
     "remainingClearSecond": 30,
-    "remainingKeySecond": 150,
-    "remainingTime": 60,
+    "GetKeySecond": 150,
   },
   "life": 3
 }
