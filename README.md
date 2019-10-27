@@ -39,11 +39,9 @@
   "difficulty": "easy", 
   "score": 114514,
   "analysis": {
-    "muscleMenu": 3,
-    "muscleSpeed": 120,
-    "clearTime": 240,
-    "remainingTime": 60,
-    "key": 2
+    "muscleCount": 67,
+    "remainingClearSecond": 30,
+    "getKeySecond": 150,
   },
   "life": 3
 }
