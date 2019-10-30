@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:3000','localhost:8080', '0.0.0.0:3000', '0.0.0.0:8080'
+    origins 'localhost:3000','localhost:8080', '0.0.0.0:3000', '0.0.0.0:8080', 'muscle-horror-festival.netlify.com'
 
     resource '*',
       headers: :any,
