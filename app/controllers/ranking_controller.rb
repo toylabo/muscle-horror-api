@@ -7,7 +7,7 @@ class RankingController < ApplicationController
     @results = Result.page(@page).per(per_page).order("score " + order)
     @response_code = 200
     @message = "Success!"
-    render 'index', formats: :json, handlers: :jbuilder, status: @response_code
+    render 'results/index', formats: :json, handlers: :jbuilder, status: @response_code
   end
 
 end
