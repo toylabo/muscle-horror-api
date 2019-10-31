@@ -1,4 +1,4 @@
-url = "https://example.com/results/#{@result.id.to_s}"
+url = "https://muscle-horror-festival.netlify.com/result/#{@result.id.to_s}"
 json.set! :responceCode, @response_code
 json.set! :message, @message
 json.set! :url, url
