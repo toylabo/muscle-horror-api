@@ -74,11 +74,9 @@ class ResultsController < ApplicationController
         :life,
         :difficulty,
         analysis:[
-            :muscleMenu,
-            :muscleSpeed,
-            :clearTime,
-            :remainingTime,
-            :key
+            :muscleCount,
+            :remainingClearSecond,
+            :getKeySecond
         ]
     )
   end
